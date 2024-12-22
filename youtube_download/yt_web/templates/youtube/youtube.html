@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Video Downloader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('path/to/your/background/image.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(0,0,0,0.5); /* Add this line */
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255,255,255, 0.9);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label, input[type="text"], input[type="submit"] {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid #007bff; /* Increase border thickness */
+            border-radius: 5px;
+            outline: none;
+            box-sizing: border-box;
+            background-color: white; /* Ensure white background */
+        }
+
+        input[type="text"]:focus {
+            outline: 2px solid #0056b3; /* Add focus style */
+        }
+
+        input[type="submit"] {
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Youtube Video Downloader</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="link">Enter URL:</label>
+            <input type="text" id="link" name="link">
+            <input type="submit" value="Download Video">
+        </form>
+    </div>
+</body>
+</html>
